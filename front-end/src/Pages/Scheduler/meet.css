@@ -1,0 +1,33 @@
+.meet-sch {
+    text-align: left;
+    align-items: center;
+    width: 600px;
+    margin-left: 300px;
+}
+
+.bot-con {
+    margin-top: 90px;
+}
+
+.bot-con button {
+    background-color: transparent;
+    border-radius: 50px;
+    margin-right: 15px;
+    padding: 15px 35px;
+    margin-bottom: 20px;
+}
+
+.bot-con button:hover {
+  border-color: rgb(54, 152, 191);
+}
+
+.mail {
+    text-decoration: none;
+    color: rgb(24, 129, 170);
+}
+
+.image {
+    max-width: 150px;
+    padding: 5px 10px;
+  }
+  

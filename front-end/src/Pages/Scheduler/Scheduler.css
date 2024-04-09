@@ -1,0 +1,348 @@
+.sch-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: white;
+  color: black;
+  padding: 30px;
+  margin: 60px;
+  width: 700;
+  height:500px;
+  overflow-y: scroll;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+/*Scrollbar css*/
+.sch-content::-webkit-scrollbar {
+  width: 8px; 
+  height: 6px;
+  overflow: hidden;
+}
+
+.sch-content::-webkit-scrollbar-thumb {
+  background-color: grey; 
+  border-radius: 3px; 
+}
+
+.sch-content::-webkit-scrollbar-track {
+  background-color: transparent; 
+}
+
+h3 {
+  text-align: left;
+}
+
+.left-content {
+  width: 40%;
+}
+
+.right-content {
+  width: 60%;
+}
+
+.sch-content span {
+  text-align: left;
+  display: block;
+  margin-top: 20px;
+}
+
+.close-button {
+  position: fixed;
+  top: 10px; 
+  right: 10px; 
+  padding: 5px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: #fff;
+  font-size: 25px;
+  z-index: 999; 
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: hsl(0, 0%, 94%);
+}
+
+/*Ribbon css*/
+.ribbon {
+  width: 140px;
+  height: 140px;
+  overflow: hidden;
+  position: absolute;
+}
+
+.ribbon::before,
+.ribbon::after {
+  position: absolute;
+  z-index: -1;
+  content: '';
+  display: block;
+  border: 5px solid #414158;
+}
+
+.ribbon span {
+  position: absolute;
+  display: block;
+  width: 225px;
+  padding: 12px 0;
+  background-color: #414158;
+  box-shadow: 0 5px 10px rgba(0,0,0,.1);
+  color: #fff;
+  font: 700 18px/1 'Lato', sans-serif;
+  text-shadow: 0 1px 1px rgba(0,0,0,.2);
+  text-align: center;
+}
+
+.ribbon-top-right {
+  top: -5px;
+  right: -5px;
+}
+.ribbon-top-right::before,
+.ribbon-top-right::after {
+  border-top-color: transparent;
+  border-right-color: transparent;
+}
+.ribbon-top-right::before {
+  top: 0;
+  left: 0;
+}
+.ribbon-top-right::after {
+  bottom: 0;
+  right: 0;
+}
+.ribbon-top-right span {
+  left: -25px;
+  top: 5px;
+  transform: rotate(45deg);
+  font-size: 12px;
+}
+
+/*Calendar css*/
+.react-calendar__navigation button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.react-calendar__navigation button {
+  font-size: 14px;
+  color: #333;
+}
+
+.react-calendar {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.react-calendar__tile {
+  font-size: 15px !important;
+  background-color: none !important;
+  border-radius: 50px;
+  border: none !important; 
+  color: rgb(144, 136, 136) !important; 
+}
+
+.react-calendar__tile--active {
+  background-color: skyblue !important; 
+}
+
+.react-calendar__month-view__weekdays__weekday abbr {
+  text-decoration: none !important;
+}
+
+.react-calendar__month-view__weekdays__weekday abbr {
+  color: #7a7171 !important; 
+}
+
+.react-calendar__tile--active {
+  background-color: none !important; 
+}
+
+.react-calendar__navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.react-calendar__navigation button:first-of-type {
+  visibility: hidden;
+}
+
+.react-calendar__navigation button:last-of-type {
+  visibility: hidden;
+}
+
+.react-calendar__navigation button {
+  font-size: 16px;
+  color: #333; 
+}
+
+.blue-date {
+  color: rgb(15, 15, 211) !important;
+  font-weight: bold !important;
+}
+
+.calendar-time-slots-container {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+}
+
+.calendar-container {
+  width: 70%;
+}
+
+.time-slots-container {
+  display: flex;
+  gap: 7px;
+  flex-direction: column;
+}
+
+.time-slot {
+  border: 1px solid rgb(81, 175, 212);
+  border-radius: 5px;
+  padding: 15px 25px;
+}
+
+.selected-time {
+  background-color: rgb(117, 109, 109);
+  color: #ffffff;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.next-button {
+  padding: 12px 25px;
+  background-color: blue;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+  .sch-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left-content {
+    width: 70%;
+    margin-bottom: 20px;
+  }
+
+  .right-content {
+    width: 100%;
+  }
+
+  .calendar-time-slots-container {
+    flex-direction: row;
+    justify-content: space-between; 
+  }
+
+  .calendar-container {
+    width: 80%;
+    align-items: center; 
+  }
+
+  .time-slots-container {
+    width: 90%;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
+
+.left-content img {
+  width: 60px;
+  margin-top: 10px;
+}
+
+.back-arrow {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  cursor: pointer;
+  color: rgba(9, 123, 189, 0.895);
+  font-size: 1.5rem;
+  transition: background-color 0.3s ease;
+  border-radius: 60%; 
+  padding: 10px;
+}
+
+.back-arrow:hover {
+  background-color: rgb(205, 225, 234); 
+}
+
+.right-content label {
+  display: flex;
+  align-items: center;
+
+}
+
+.right-content label input[type="checkbox"] {
+  margin-right: 10px;
+  margin-top: 23px;
+  transform: scale(1.5);
+}
+
+.right-content form {
+  display: flex;
+  flex-direction: column;
+}
+
+.right-content form label {
+ margin-bottom: 10px;
+}
+
+.right-content form input[type="text"],
+.right-content form input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #bbb2b2;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+.right-content form button[type="submit"] {
+  padding: 10px 15px; 
+  width: 110px;
+  background-color: transparent;
+  color: blue;
+  border: 2px solid blue;
+  border-radius: 40px;
+  cursor: pointer;
+  display: block; 
+  margin-top: 10px;
+}
+
+.right-content form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #bbb2b2;
+  border-radius: 4px;
+  box-sizing: border-box; 
+}
+
+.sch-btn {
+  padding: 10px 25px; 
+  width: 150px;
+  background-color: transparent;
+  color: blue;
+  border: 2px solid blue;
+  border-radius: 40px;
+  cursor: pointer;
+  display: block; 
+  margin-top: 10px;
+}
+
+.image {
+  max-width: 150px;
+  padding: 5px 10px;
+}
